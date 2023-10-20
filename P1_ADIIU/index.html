@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ADIIU Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-dark navbar-expand-md bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Demo Dashboard</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            aria-current="page"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul
+              class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll mr-auto"
+            >
+              <li class="nav-item">
+                <a class="nav-link" href="https://uib.cat">UIB</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://www.kaggle.com/datasets/nelgiriyewithana/top-spotify-songs-2023/data"
+                  >Data Source</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="row mx-1 my-2">
+      
+      <h1>Most streamed songs spotify 2023</h1>
+
+      <div class="text-center mt-4">
+        <button type="button" class="btn btn-dark" id="1" onclick="{showChart(id)}">
+          Show Chart 1
+        </button>
+        <button type="button" class="btn btn-dark" id="2" onclick="{showChart(id)}">
+          Show Chart 2
+        </button>
+        <button type="button" class="btn btn-dark" id="3" onclick="{showChart(id)}">
+          Show Chart 3
+        </button>
+      </div>
+
+      <div class="col-md-12 mt-4">
+        <div id="chartContainer"></div>
+        <p><i id="textChart"></i></p>
+      </div>
+
+      <div id="texts">
+        <p>
+          <i id="text1">
+            En este gráfico podemos apreciar el top 10 de canciones más
+            escuchadas en 2023 junto con el numero de reproducciones de cada
+            una. Como podemos ver las 6 primeras canciones cuentan con cerca de
+            1000 millones de reproducciones, mientras que las últimas cuatro
+            solo cuentan con cerca de 100 millones de reproducciones.
+          </i>
+        </p>
+
+        <p>
+          <i id="text2"
+            >Como podemos ver en este pie chart el 81.6% de las canciones más
+            escuchadas del 2023, fueron emitidas por primera vez en otros años,
+            mientras que el 18.4% fueron emitidas el propio 2023. Esto nos
+            indica que en general se escuchan más las canciones de otros años
+            pasados que las más actuales.
+          </i>
+        </p>
+
+        <p>
+          <i id="text3"
+            >En este gráfico podemos ver la relación entre el número de veces
+            que se ha reproducido una canción y el número de artistas de dicha
+            canción. Como se puede apreciar a menor número de artistas, la
+            canción suele ser más popular y obtener mayor número de
+            reproducciones.
+          </i>
+        </p>
+      </div>
+
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/controller.js"></script>
+    <script src="./js/charts.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/buttonCharts.js"></script>
+  </body>
+</html>

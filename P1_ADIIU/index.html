@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <title>ADIIU Dashboard</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -17,13 +16,13 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
   </head>
+
   <body>
     <header>
       <nav class="navbar navbar-dark navbar-expand-md bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Demo Dashboard</a>
+          <a class="navbar-brand" href="#">Songs Dashboard</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -57,17 +56,31 @@
     </header>
 
     <div class="row mx-1 my-2">
-      
       <h1>Most streamed songs spotify 2023</h1>
 
       <div class="text-center mt-4">
-        <button type="button" class="btn btn-dark" id="1" onclick="{showChart(id)}">
+        <button
+          type="button"
+          class="btn btn-dark"
+          id="1"
+          onclick="{showChart(id)}"
+        >
           Show Chart 1
         </button>
-        <button type="button" class="btn btn-dark" id="2" onclick="{showChart(id)}">
+        <button
+          type="button"
+          class="btn btn-dark"
+          id="2"
+          onclick="{showChart(id)}"
+        >
           Show Chart 2
         </button>
-        <button type="button" class="btn btn-dark" id="3" onclick="{showChart(id)}">
+        <button
+          type="button"
+          class="btn btn-dark"
+          id="3"
+          onclick="{showChart(id)}"
+        >
           Show Chart 3
         </button>
       </div>
@@ -108,7 +121,6 @@
           </i>
         </p>
       </div>
-
     </div>
 
     <script

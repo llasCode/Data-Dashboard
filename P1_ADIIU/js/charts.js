@@ -63,6 +63,13 @@ function createSecondChart(data) {
   const percentage_year2023 = (year_2023.length / total) * 100;
   const percentage_yearOther = (year_other.length / total) * 100;
 
+  // Monochromatic color scale for accessiblity
+  const colors = Highcharts.getOptions().colors.map((c, i) =>
+    Highcharts.color(Highcharts.getOptions().colors[0])
+      .brighten((i - 3) / 7)
+      .get()
+  );
+
   Highcharts.chart("container2", {
     accessibility: {
       description:
@@ -89,6 +96,7 @@ function createSecondChart(data) {
     plotOptions: {
       pie: {
         allowPointSelect: true,
+        colors,
         cursor: "pointer",
         dataLabels: {
           enabled: true,
@@ -130,6 +138,16 @@ function createThirdChart(data) {
   }
 
   Highcharts.chart("container3", {
+    tooltip: {
+      formatter: function () {
+        var tooltip =
+          '<span style="color: #9A47AB;">' +
+          this.series.name +
+          "</span>: " +
+          this.y;
+        return tooltip;
+      },
+    },
     accessibility: {
       description:
         "In this chart, is shown the relationship between the number of times a song has been played and the number of artists on that song. The data show that songs with fewer artists tend to be more popular and receive a higher number of plays.",
@@ -180,6 +198,9 @@ function createThirdChart(data) {
       {
         name: "Streams",
         data: dataChart,
+        marker: {
+          fillColor: "#9A47AB",
+        },
       },
     ],
   });

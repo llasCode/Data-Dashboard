@@ -3,7 +3,7 @@
 
 # Spotify Data Dashboard
 
--This dashboard is a web application made with the Highcharts JavaScript library and PHP for the connection with the database (MySQL). <br /> It shows data from the most streamed songs of 2023. The data has been collected from kaggle (https://www.kaggle.com/datasets/nelgiriyewithana/top-spotify-songs-2023/data). <br /> It is noteworthy to mention that all the charts have an accessibility description for screen readers.
+-This dashboard is a simple web application made with the Highcharts JavaScript library and PHP for the connection with the database (MySQL). <br /> It shows data from the most streamed songs of 2023. The data has been collected from kaggle (https://www.kaggle.com/datasets/nelgiriyewithana/top-spotify-songs-2023/data). <br /> It is noteworthy to mention that all the charts have an accessibility description for screen readers.
 
 # Instalation
 
